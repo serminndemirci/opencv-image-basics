@@ -9,6 +9,9 @@ It includes basic transformations such as resizing, cropping, pixel manipulation
 - Center crop
 - Pixel color modification
 - Horizontal mirroring (flip)
+- Add grayscale conversion
+- Add edge detection (Canny)
+- Add image filtering techniques
   
 ## Technologies Used
 - Python
@@ -21,7 +24,3 @@ It includes basic transformations such as resizing, cropping, pixel manipulation
 2. Run the script:
    python wall-e.py
 
-## Future Improvements
-- Add grayscale conversion
-- Add edge detection (Canny)
-- Add image filtering techniques
