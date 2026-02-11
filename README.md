@@ -9,12 +9,12 @@ It includes basic transformations such as resizing, cropping, pixel manipulation
 - Center crop
 - Pixel color modification
 - Horizontal mirroring (flip)
-- 
+  
 ## Technologies Used
 - Python
 - OpenCV
 - NumPy
-- 
+  
 ## How to Run
 1. Install required libraries:
    pip install opencv-python
