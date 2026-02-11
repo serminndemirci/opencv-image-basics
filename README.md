@@ -1,2 +1,27 @@
-# opencv-image-basics
-Implementation of fundamental image processing techniques using Python and OpenCV.
+# OpenCV Image Basics
+## Overview
+This project demonstrates fundamental image processing operations using Python and OpenCV.  
+It includes basic transformations such as resizing, cropping, pixel manipulation, and mirroring.The goal of this project is to understand how images are represented as matrices and how pixel-level operations work. 
+
+## Features
+- Resize an image
+- Crop using mouse selection (ROI)
+- Center crop
+- Pixel color modification
+- Horizontal mirroring (flip)
+- 
+## Technologies Used
+- Python
+- OpenCV
+- NumPy
+- 
+## How to Run
+1. Install required libraries:
+   pip install opencv-python
+2. Run the script:
+   python wall-e.py
+
+## Future Improvements
+- Add grayscale conversion
+- Add edge detection (Canny)
+- Add image filtering techniques
