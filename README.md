@@ -1,7 +1,7 @@
 # OpenCV Image Basics
 ## Overview
 This project demonstrates fundamental image processing operations using Python and OpenCV.  
-It includes basic transformations such as resizing, cropping, pixel manipulation, and mirroring.The goal of this project is to understand how images are represented as matrices and how pixel-level operations work. 
+It includes basic transformations such as resizing, cropping, pixel manipulation, and mirroring.The goal of this project is to understand how images are represented as matrices and how pixel-level operations work. The image is downloaded dynamically from a URL when the script runs.
 
 ## Features
 - Resize an image
