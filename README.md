@@ -81,8 +81,11 @@ Resizing changes the spatial resolution of the image using interpolation techniq
 
 ---
 
-### Cropping (Region of Interest - ROI)
-Cropping extracts a selected region of the image using matrix slicing operations.
+### Cropping (Region of Interest - ROI)  
+Cropping extracts a selected region of the image using matrix slicing operations.    
+ROI slicing follows NumPy indexing format (img[y1:y2, x1:x2]).    
+Note that slicing order is (row, column) → (y, x).    
+ROI slicing returns a view of the original image. Use .copy() if independent modification is required.  
 
 ---
 
