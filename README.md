@@ -49,7 +49,7 @@ Each pixel contains intensity values in BGR (Blue, Green, Red) format.
 ---
 
 #### Resizing
-Resizing changes the spatial resolution of the image using interpolation techniques.
+Resizing changes the spatial resolution of the image using interpolation techniques.Interpolation is a mathematical technique used to estimate new pixel values when resizing an image.
 
 - Interpolation type significantly affects image quality.
 - Interpolation types:
