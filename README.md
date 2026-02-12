@@ -92,18 +92,88 @@ ROI slicing returns a view of the original image. Use .copy() if independent mod
 ### Pixel Manipulation
 Pixel values can be directly modified by accessing specific matrix indices.
 
+In OpenCV, images are stored as NumPy arrays in (height, width, channels) format. As I said in the previous part.   
+Pixel indexing follows the order img[y, x], not img[x, y].  
+
+Each pixel in a color image contains three values in BGR format (Blue, Green, Red), ranging from 0 to 255.  
+
+Direct pixel manipulation is useful for:
+- Region highlighting
+- Mask creation
+- Noise simulation
+- Data augmentation experiments  
+
+When modifying larger regions, slicing operations such as img[y1:y2, x1:x2] are more efficient than single-pixel updates.
+
 ---
 
 ### Image Flipping
 Flipping mirrors the image along a specified axis (horizontal or vertical).
+
+OpenCV provides the function:
+
+cv2.flip(img, flipCode)
+
+Where:
+- flipCode = 0 → Vertical flip
+- flipCode = 1 → Horizontal flip
+- flipCode = -1 → Both axes
+
+Flipping does not change the image resolution or aspect ratio.  
+It only transforms spatial orientation.
+
+This operation is commonly used for:
+- Data augmentation in deep learning
+- Symmetry analysis
+- Visual transformations
 
 ---
 
 ### Grayscale Conversion
 Converts a 3-channel color image into a single-channel intensity image.
 
+This is done using:
+
+cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+Grayscale conversion is not a simple average of RGB values.  
+It uses a weighted transformation based on human visual perception:
+
+Y = 0.299R + 0.587G + 0.114B
+
+After conversion, the image shape changes from:
+(height, width, 3)
+
+to:
+(height, width)
+
+Grayscale images:
+- Reduce computational cost
+- Simplify feature extraction
+- Are commonly used before edge detection or object detection
+
 ---
 
 ### Edge Detection (Canny)
 Detects strong intensity gradients to highlight object boundaries.
 
+Canny edge detection is applied as:
+
+cv2.Canny(image, threshold1, threshold2)
+
+The algorithm consists of multiple stages:
+- Noise reduction (Gaussian blur)
+- Gradient calculation
+- Non-maximum suppression
+- Double thresholding
+- Edge tracking by hysteresis
+
+Threshold parameters determine edge sensitivity:
+- Lower values detect more edges (including noise)
+- Higher values detect only strong edges
+
+Canny edge detection is widely used in:
+- Contour detection
+- Shape analysis
+- Object boundary extraction
+- Classical computer vision pipelines
